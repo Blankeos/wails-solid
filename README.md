@@ -2,7 +2,18 @@
 
 ## About
 
-This is the official Wails Svelte template.
+This is the Wails Solid Template created by [Carlo](https://github.com/blankeos).
+
+**Technologies Used**:
+
+- Wails (Go)
+- SolidJS
+- TailwindCSS
+
+Added these for DevX:
+
+- prettier + prettier-plugin-tailwindcss
+- PNPM (If you wish to change, make sure to change `wails.json`)
 
 ## Live Development
 
