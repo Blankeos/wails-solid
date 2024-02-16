@@ -17,7 +17,7 @@ This is currently a work in progress.
 - SolidJS
 - TailwindCSS
 - Extra things for DevX:
-  - prettier + prettier-plugin-tailwindcss
+  - prettier + prettier-plugin-tailwindcss + eslint-plugin-simple-import-sort
   - PNPM (If you wish to change, make sure to change `wails.json`)
 
 ## 👨‍💻 Live Development
