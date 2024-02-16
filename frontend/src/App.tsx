@@ -1,9 +1,10 @@
-import { createMemo, createSignal } from "solid-js";
-import solidLogo from "./assets/solid.svg";
-import wailsLogo from "./assets/wails.png";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { createSignal } from "solid-js";
 import { Greet } from "wailsjs/go/main/App";
+
+import "./App.css";
+import solidLogo from "./assets/solid.svg";
+import viteLogo from "/vite.svg";
+import wailsLogo from "./assets/wails.png";
 
 function App() {
   const [count, setCount] = createSignal(0);
