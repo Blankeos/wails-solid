@@ -12,4 +12,10 @@ export default defineConfig({
       wailsjs: resolve(root, "wailsjs"),
     },
   },
+  server: {
+    hmr: {
+      host: 'localhost',
+      protocol: 'ws',
+    },
+  }
 });

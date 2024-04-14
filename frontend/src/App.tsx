@@ -51,7 +51,7 @@ function App() {
 
       <div class="h-5" />
 
-      <button onClick={() => setCount((count) => count + 1)}>
+      <button onClick={() => setCount(count() + 1)}>
         count is {count()}
       </button>
 
