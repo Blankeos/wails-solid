@@ -6,6 +6,18 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
 
+    "types": [
+      "vite-plugin-solid-svg/types-component-solid", // must be before vite/client
+      "vite/client" // Replaces the /// <reference types="vite/client" /> in vite-env.d.ts
+    ],
+
+    /* Make sure to configure on Vite too. */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "wailsjs": [".wailsjs/*"]
+    },
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -19,13 +31,7 @@
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "wailsjs": [".wailsjs/*"]
-    }
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

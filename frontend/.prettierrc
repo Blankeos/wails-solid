@@ -1,16 +1,10 @@
 {
-  "trailingComma": "all",
-  "tabWidth": 2,
-  "semi": true,
+  "useTabs": false,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "printWidth": 100,
   "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindFunctions": ["cn"],
-  "singleQuote": false,
-  "overrides": [
-    {
-      "files": ".eslintrc",
-      "options": {
-        "trailingComma": "none"
-      }
-    }
-  ]
+  "tailwindConfig": "./tailwind.config.js",
+  "tailwindFunctions": ["tv"],
+  "pluginSearchDirs": ["."]
 }

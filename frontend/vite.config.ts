@@ -1,21 +1,31 @@
-import { defineConfig } from "vite";
-import solid from "vite-plugin-solid";
-import { resolve } from "node:path";
+// Icons
+import solidSvg from 'vite-plugin-solid-svg';
 
-const root = resolve(__dirname, ".");
+// Vike
+import vikeSolid from 'vike-solid/vite';
+import vike from 'vike/plugin';
+
+// Vite
+import { resolve } from 'node:path';
+import { defineConfig } from 'vite';
+const root = resolve(__dirname, '.');
 
 export default defineConfig({
-  plugins: [solid()],
+  plugins: [vike(), vikeSolid(), solidSvg()],
   resolve: {
     alias: {
-      "@": resolve(root, "src"),
-      wailsjs: resolve(root, "wailsjs"),
+      '@': resolve(root, 'src'),
+      wailsjs: resolve(root, 'wailsjs'),
     },
   },
+
+  // Vite options tailored for Wails development.
   server: {
+    port: 1420,
+    strictPort: true,
     hmr: {
       host: 'localhost',
       protocol: 'ws',
     },
-  }
+  },
 });
