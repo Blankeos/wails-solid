@@ -15,6 +15,7 @@ This is currently a work in progress.
 
 - Wails (Go)
 - SolidJS
+- Vike (Filesystem Routing) - `vite build` will build static.
 - TailwindCSS
 - Extra things for DevX:
   - prettier + prettier-plugin-tailwindcss + eslint-plugin-simple-import-sort
