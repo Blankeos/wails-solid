@@ -11,7 +11,7 @@ import { defineConfig } from 'vite';
 const root = resolve(__dirname, '.');
 
 export default defineConfig({
-  plugins: [vike(), vikeSolid(), solidSvg()],
+  plugins: [vike({ prerender: true }), vikeSolid(), solidSvg()],
   resolve: {
     alias: {
       '@': resolve(root, 'src'),

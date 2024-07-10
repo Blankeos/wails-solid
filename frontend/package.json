@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preview-mac": "../build/bin/wails-solid.app/Contents/MacOS/wails-solid"
   },
   "dependencies": {
     "clsx": "^2.1.1",
