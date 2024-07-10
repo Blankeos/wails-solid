@@ -4,13 +4,14 @@ import WailsImage from '@/assets/icons/wails.png';
 import { createSignal } from 'solid-js';
 
 import { Greet } from 'wailsjs/go/main/App';
+import { BrowserOpenURL } from 'wailsjs/runtime';
 
 export default function Page() {
   const [greetMsg, setGreetMsg] = createSignal('');
   const [name, setName] = createSignal('');
 
   async function greet() {
-    Greet(name()).then((result) => setGreetMsg(result));
+    setGreetMsg(await Greet(name()));
   }
 
   return (
@@ -18,13 +19,26 @@ export default function Page() {
       <h1>Welcome to Wails!</h1>
 
       <div class="flex items-center justify-center gap-x-10">
-        <a href="https://vitejs.dev" target="_blank">
+        <a
+          href="https://vitejs.dev"
+          target="_blank"
+          onClick={() => BrowserOpenURL('https://vitejs.dev')}
+        >
           <img src="/vite.svg" class="logo vite h-16" alt="Vite logo" />
         </a>
-        <a href="https://wails.io" target="_blank">
+        <a
+          href="https://wails.io"
+          target="_blank"
+          onClick={() => BrowserOpenURL('https://wails.io')}
+        >
           <img src={WailsImage} class="logo tauri h-16" alt="Wails logo" />
         </a>
-        <a href="https://solidjs.com" target="_blank" class="logo solid">
+        <a
+          href="https://solidjs.com"
+          target="_blank"
+          class="logo solid"
+          onClick={() => BrowserOpenURL('https://solidjs.com')}
+        >
           <IconLogo height="4rem" />
         </a>
       </div>
